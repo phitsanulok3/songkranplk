@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* ไล่สีปุ่ม: ล่างเข้มไปบนอ่อน */
             --gold-grad: linear-gradient(0deg, #8a5a12 0%, #b38728 50%, #fcf6ba 100%);
             --blue-deep: #001ba0;
         }
@@ -23,7 +22,6 @@
         .page.active { display: block; animation: fadeIn 0.5s ease; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* ปรับภาพให้ชัดและเต็มจอ */
         .bg-img { 
             width: 100%; height: 100%; 
             object-fit: cover; 
@@ -31,7 +29,6 @@
             pointer-events: none;
         }
 
-        /* ตำแหน่งปุ่มกด */
         .btn-wrapper {
             position: absolute; bottom: 6%; left: 0; width: 100%;
             display: flex; flex-direction: column; align-items: center; z-index: 999;
@@ -47,7 +44,6 @@
         }
         .btn-main:active { transform: scale(0.95); }
 
-        /* ป้ายอวยพรวางเหนือปุ่ม ไม่บังหน้า */
         .blessing-overlay {
             width: 85%; background: rgba(255, 255, 255, 0.95);
             padding: 15px; border-radius: 15px; border: 3px solid #bf953f;
@@ -120,17 +116,22 @@
         { img: 'https://i.ibb.co/Myk7z9qd/5.png', vdo: 'https://res.cloudinary.com/dl5s23mrx/video/upload/v1775629823/Man_receiving_water_202604081328_ojpwzo.mp4' },
         { img: 'https://i.ibb.co/dJ3srsHk/6.png', vdo: 'https://res.cloudinary.com/dl5s23mrx/video/upload/v1775632464/Woman_receiving_water_202604081413_dfhz7x.mp4' },
         { img: 'https://i.ibb.co/tptknh7v/7.png', vdo: 'https://res.cloudinary.com/dl5s23mrx/video/upload/v1775631683/Man_receives_water__202604081358_vptyar.mp4' },
-        // 🎬 อัปเดตวิดีโอบุคคลที่ 5 เป็นลิงก์ใหม่ที่คุณส่งมา
         { img: 'https://i.ibb.co/TBWN97ND/Gemini-Generated-Image-u2lu3mu2lu3mu2lu.png', vdo: 'https://res.cloudinary.com/dl5s23mrx/video/upload/v1775636857/Woman_receiving_water_202604081527_kabv6t.mp4' }
     ];
 
-    const wishes = [
-        "ขอให้มีความสุขสดชื่นในวันสงกรานต์ครับ",
-        "ขอให้สุขภาพแข็งแรงตลอดปีตลอดไปครับ",
-        "ขอให้โชคดีมีชัย คิดหวังสิ่งใดขอให้สมปรารถนาครับ",
-        "ขออำนาจคุณพระศรีรัตนตรัยดลบันดาลให้ท่านมีความสุขครับ"
+   const wishes = [
+        "ขอให้มีความสุขสดชื่น เบิกบานใจ สุขภาพแข็งแรงตลอดปีใหม่ไทย",
+        "ขออำนาจคุณพระศรีรัตนตรัยดลบันดาลให้ประสบแต่ความสุขและความเจริญ",
+        "ขอให้ปีใหม่นี้เป็นปีที่เต็มไปด้วยความสำเร็จรุ่งเรืองและโชคลาภ",
+        "ขอให้มีพลังกายพลังใจที่เข้มแข็ง พร้อมนำพาองค์กรสู่ความก้าวหน้า",
+        "ขอให้สิ่งศักดิ์สิทธิ์คุ้มครองให้แคล้วคลาดปลอดภัยจากอุปสรรคทั้งปวง",
+        "ขอให้ทุกวันของปีใหม่ไทยเต็มไปด้วยรอยยิ้มและความราบรื่นในการทำงาน",
+        "ขอให้มีความสุขสำราญใจ ร่างกายสมบูรณ์แข็งแรง ปราศจากโรคภัยไข้เจ็บ",
+        "ขอให้เป็นที่รักและเคารพของลูกน้องและเพื่อนร่วมงานสืบไป",
+        "ขอให้มีโชคมีชัย ร่ำรวยเงินทองและบารมีตลอดปีและตลอดไป",
+        "ขอให้สายน้ำสงกรานต์ชะล้างความทุกข์โศก และนำพาความสดใสมาสู่ชีวิต"
     ];
-
+    
     let currentIdx = 0;
 
     function startApp() {
